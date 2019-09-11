@@ -77,7 +77,7 @@ exports.makeRoutes = (baseRoutes, {
 
       // Generate localized children routes if any
       if (route.children) {
-        delete localizedRoute.name
+        // delete localizedRoute.name
         localizedRoute.children = []
         for (let i = 0, length1 = route.children.length; i < length1; i++) {
           localizedRoute.children = localizedRoute.children.concat(buildLocalizedRoutes(route.children[i], { locales: [locale] }, true, isExtraRouteTree))
